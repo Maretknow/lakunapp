@@ -1,0 +1,6 @@
+{"level":"warn","message":{},"msg":"Migrasi table 001_create_users.sql selesai","timestamp":"2026-04-18 07:59:55 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 002_create_audit_log.sql selesai","timestamp":"2026-04-18 07:59:55 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 003_create_kunjungan_nsb.sql selesai","timestamp":"2026-04-18 07:59:55 +07:00"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-04-18 09:26:53 +07:00","url":"/api/v1/kunjungan?limit=100&page=1"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-04-18 11:21:52 +07:00","url":"/api/v1/kunjungan?limit=20&page=1"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-04-18 11:21:53 +07:00","url":"/api/v1/kunjungan?limit=20&page=1"}

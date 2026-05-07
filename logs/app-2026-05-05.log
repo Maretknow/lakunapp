@@ -1,0 +1,29 @@
+{"level":"warn","message":{},"msg":"Migrasi table 001_create_users.sql selesai","timestamp":"2026-05-05 08:32:44 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 002_create_audit_log.sql selesai","timestamp":"2026-05-05 08:32:44 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 003_create_kunjungan_nsb.sql selesai","timestamp":"2026-05-05 08:32:44 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 004_alter_kunjungan_tgl_kunjungan_to_date.sql selesai","timestamp":"2026-05-05 08:32:44 +07:00"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:41:28 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:41:44 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:42:21 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:43:03 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:44:50 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:45:15 +07:00","url":"/api/v1/users/createUser"}
+{"level":"warn","message":{},"msg":"Migrasi table 001_create_users.sql selesai","timestamp":"2026-05-05 08:45:28 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 002_create_audit_log.sql selesai","timestamp":"2026-05-05 08:45:28 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 003_create_kunjungan_nsb.sql selesai","timestamp":"2026-05-05 08:45:28 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 004_alter_kunjungan_tgl_kunjungan_to_date.sql selesai","timestamp":"2026-05-05 08:45:28 +07:00"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:45:33 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:45:34 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 08:45:57 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{},"method":"POST","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-05-05 09:33:41 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-05-05 09:33:43 +07:00","url":"/api/v1/kunjungan?limit=20&page=1"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-05-05 09:33:43 +07:00","url":"/api/v1/users?limit=20&page=1"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-05-05 09:33:46 +07:00","url":"/api/v1/kunjungan?limit=20&page=1"}
+{"ip":"::1","level":"warn","message":{},"method":"GET","msg":"Dilarang mengakses halaman ini, authorized only","timestamp":"2026-05-05 09:33:47 +07:00","url":"/api/v1/users?limit=20&page=1"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 09:34:15 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 09:41:33 +07:00","url":"/api/v1/users/createUser"}
+{"ip":"::1","level":"warn","message":{"errors":[{"field":"role","message":"role tidak sesuai"}]},"method":"POST","msg":"Gagal Menyimpan, Validasi gagal","timestamp":"2026-05-05 09:41:40 +07:00","url":"/api/v1/users/createUser"}
+{"level":"warn","message":{},"msg":"Migrasi table 001_create_users.sql selesai","timestamp":"2026-05-05 09:43:26 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 002_create_audit_log.sql selesai","timestamp":"2026-05-05 09:43:26 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 003_create_kunjungan_nsb.sql selesai","timestamp":"2026-05-05 09:43:26 +07:00"}
+{"level":"warn","message":{},"msg":"Migrasi table 004_alter_kunjungan_tgl_kunjungan_to_date.sql selesai","timestamp":"2026-05-05 09:43:26 +07:00"}
