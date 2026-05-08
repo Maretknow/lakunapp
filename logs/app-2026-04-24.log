@@ -1,4 +1,0 @@
-{"level":"warn","message":{},"msg":"Migrasi table 001_create_users.sql selesai","timestamp":"2026-04-24 08:09:09 +07:00"}
-{"level":"warn","message":{},"msg":"Migrasi table 002_create_audit_log.sql selesai","timestamp":"2026-04-24 08:09:09 +07:00"}
-{"level":"warn","message":{},"msg":"Migrasi table 003_create_kunjungan_nsb.sql selesai","timestamp":"2026-04-24 08:09:09 +07:00"}
-{"level":"warn","message":{},"msg":"Migrasi table 004_alter_kunjungan_tgl_kunjungan_to_date.sql selesai","timestamp":"2026-04-24 08:09:09 +07:00"}
