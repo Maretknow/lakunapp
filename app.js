@@ -20,6 +20,8 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
+app.set("trust proxy", 1);
+
 useSessions(app);
 
 app.use((req, res, next) => {
