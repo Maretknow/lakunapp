@@ -14,8 +14,8 @@ const app = express();
 app.use(express.json());
 
 const limiter = rateLimit({
-  windowMs: 60_000, // 1 menit
-  max: 10, // 10 percobaan per menit
+  windowMs: 15 * 60 * 1000, // 15 menit
+  max: 200, // 10 percobaan per 15 menit
   standardHeaders: true,
   legacyHeaders: false,
 });
