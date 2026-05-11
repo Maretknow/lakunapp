@@ -5,8 +5,8 @@ const listKunjunganRules = [
   query("page").optional().isInt({ min: 1 }).withMessage("page harus angka"),
   query("limit")
     .optional()
-    .isInt({ min: 1, max: 100 })
-    .withMessage("limit 1-100"),
+    .isInt({ min: 1, max: 9999 })
+    .withMessage("limit 1-9999"),
   query("ao_username").optional().trim(),
   query("nama_nasabah").optional().trim(),
   query("kode_kantor").optional().trim(),
