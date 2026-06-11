@@ -12,3 +12,16 @@ BEGIN
         USING tgl_kunjungan::date;
 END IF;
 END $$;
+
+DO $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM information_schema.columns 
+        WHERE table_schema = 'public'
+        AND table_name = 'kunjungan_nsb'
+        AND column_name = 'tujuan_kunjungan'
+    ) THEN
+    ALTER TABLE kunjungan_nsb
+        ADD COLUMN tujuan_kunjungan TEXT;
+END IF;
+END $$;

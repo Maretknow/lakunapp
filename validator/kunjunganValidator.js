@@ -48,6 +48,10 @@ const createKunjunganRule = [
     .withMessage("kol_nsb harus angka 0 - 5"),
   body("alamat_nsb").trim().notEmpty().withMessage("alamat_nsb wajib diisi"),
   body("ket_hasil").trim().notEmpty().withMessage("ket_hasil wajib diisi"),
+  body("tujuan_kunjungan")
+    .trim()
+    .notEmpty()
+    .withMessage("tujuan_kunjungan wajib diisi"),
   body().custom((_, { req }) => {
     if (!req.file) throw new Error("Foto wajib di upload(field : foto_nsb)");
     return true;
@@ -70,6 +74,7 @@ const updateKunjunganRule = [
   body("kol_nsb").optional({ nullable: true }).isInt(),
   body("alamat_nsb").optional().trim().notEmpty(),
   body("ket_hasil").optional().trim().notEmpty(),
+  body("tujuan_kunjungan").optional().trim().notEmpty(),
   body().custom((_, { req }) => {
     const allowed = [
       "ao_nama_lengkap",
@@ -80,6 +85,7 @@ const updateKunjunganRule = [
       "kol_nsb",
       "alamat_nsb",
       "ket_hasil",
+      "tujuan_kunjungan",
     ];
     const hasAnyField = allowed.some((k) => req.body?.[k] !== undefined);
     const hasFile = !!req.file;

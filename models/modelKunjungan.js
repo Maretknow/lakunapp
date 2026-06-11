@@ -41,7 +41,7 @@ const listKunjungan = async ({
 
   values.push(limit, offset);
 
-  const sql = `SELECT id_kunjungan, ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah , nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, url_foto, create_at, update_at
+  const sql = `SELECT id_kunjungan, ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah , nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, tujuan_kunjungan, url_foto, create_at, update_at
   FROM kunjungan_nsb ${where.length ? `WHERE ${where.join(" AND ")}` : ""} ORDER BY tgl_kunjungan DESC NULLS LAST, id_kunjungan DESC LIMIT $${i++} OFFSET $${i++}`;
 
   const { rows } = await pool.query(sql, values);
@@ -50,7 +50,7 @@ const listKunjungan = async ({
 };
 
 const findKunjunganById = async (id) => {
-  const sql = `SELECT id_kunjungan, ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah, nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, url_foto, create_at, update_at FROM kunjungan_nsb WHERE id_kunjungan = $1 LIMIT 1`;
+  const sql = `SELECT id_kunjungan, ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah, nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, tujuan_kunjungan, url_foto, create_at, update_at FROM kunjungan_nsb WHERE id_kunjungan = $1 LIMIT 1`;
   const { rows } = await pool.query(sql, [id]);
   return rows[0] || null;
 };
@@ -68,12 +68,13 @@ const insertKunjungan = async ({
   kol_nsb,
   alamat_nsb,
   ket_hasil,
+  tujuan_kunjungan,
   url_foto,
 }) => {
   const sql = `INSERT INTO kunjungan_nsb (
-  ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah, nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, url_foto)
-  VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) 
-  RETURNING id_kunjungan, ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah, nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, url_foto, create_at, update_at 
+  ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah, nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, tujuan_kunjungan, url_foto)
+  VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) 
+  RETURNING id_kunjungan, ao_user_id, ao_username, ao_nama_lengkap, ao_bagian, kode_kantor, tgl_kunjungan, tipe_nasabah, nama_nasabah, no_rekening, kol_nsb, alamat_nsb, ket_hasil, tujuan_kunjungan, url_foto, create_at, update_at 
   `;
   const values = [
     ao_user_id ?? null,
@@ -88,6 +89,7 @@ const insertKunjungan = async ({
     kol_nsb ?? null,
     alamat_nsb,
     ket_hasil,
+    tujuan_kunjungan,
     url_foto,
   ];
 
@@ -105,6 +107,7 @@ const updateKunjunganById = async (
     kol_nsb,
     alamat_nsb,
     ket_hasil,
+    tujuan_kunjungan,
     url_foto,
   },
 ) => {
@@ -140,6 +143,10 @@ const updateKunjunganById = async (
     sets.push(`ket_hasil = $${i++}`);
     values.push(ket_hasil);
   }
+  if (tujuan_kunjungan !== undefined) {
+    sets.push(`tujuan_kunjungan = $${i++}`);
+    values.push(tujuan_kunjungan);
+  }
   if (url_foto !== undefined) {
     sets.push(`url_foto = $${i++}`);
     values.push(url_foto);
@@ -166,6 +173,7 @@ const updateKunjunganById = async (
       kol_nsb,
       alamat_nsb,
       ket_hasil,
+      tujuan_kunjungan,
       url_foto,
       create_at,
       update_at
@@ -188,6 +196,7 @@ const deleteKunjunganById = async (id) => {
       kol_nsb,
       alamat_nsb,
       ket_hasil,
+      tujuan_kunjungan,
       url_foto,
       create_at,
       update_at`;

@@ -157,6 +157,7 @@ const createKunjungan = async (req, res, next) => {
       kol_nsb: req.body.kol_nsb,
       alamat_nsb: req.body.alamat_nsb,
       ket_hasil: req.body.ket_hasil,
+      tujuan_kunjungan: req.body.tujuan_kunjungan,
       url_foto: `/uploads/kunjungan/${req.file.filename}`,
     });
 
@@ -242,6 +243,7 @@ const updateKunjungan = async (req, res, next) => {
       "no_rekening",
       "kol_nsb",
       "alamat_nsb",
+      "tujuan_kunjungan",
       "ket_hasil",
     ]) {
       if (req.body?.[k] !== undefined) updates[k] = req.body[k];
